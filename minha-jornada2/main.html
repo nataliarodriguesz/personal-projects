@@ -1,33 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Jornada</title>
+    <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Menu principal">
+            <div class="nome">
+                <a href="#">Natália Rodrigues</a>
+            </div>
+
             <ul>
-                <li><a href="#sonhos">SONHOS</a></li>
-                <li><a href="#descobertas">DESCOBERTAS</a></li>
-                <li><a href="#certeza">CERTEZA</a></li>
+                <li><a href="#sonhos">Sonhos</a></li>
+                <li><a href="#descobertas">Descobertas</a></li>
+                <li><a href="#certeza">Certeza</a></li>
             </ul>
         </nav>
         <section class="hero">
-            <h1>MINHA Jornada</h1>
-            <p>UMA HISTÓRIA ENTRE IDEIAS, DESCOBERTAS E ESCOLHAS</p>
-            <img src="imagens/logo-seta.png" alt="">
-            <p>Role para continuar</p>
+            <h1>Minha <span>Jornada</span></h1>
+            <p>Uma história entre ideias, descobertas e escolhas</p>
+            <div class="scroll-indicator">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                    <circle
+                        cx="30" 
+                        cy="30" 
+                        r="28"
+                        stroke="black"
+                        stroke-width="1.5"
+                    />
+
+                    <path 
+                        d="M22 27L30 35L38 27"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+                <p>Role para continuar</p>
+            </div>
         </section>
     </header>
 
     <main>
-        <section id="sonhos">
+        <section id="sonhos" class="secao">
             <div class="bloco intro">
                 <div class="container">
                     <div class="texto">
-                        <h2>Meu "quando eu crescer"</h2>
+                        <h2>Meu <span>"quando eu crescer"</span></h2>
                         <p>
                             Desde pequena, eu sempre tive uma resposta para a pergunta “o que você quer ser quando crescer?”. Durante muitos anos, essa resposta foi: <strong>arquiteta</strong>. Meu interesse pela arquitetura surgiu da admiração por projetos diferentes, casas marcantes e pela ideia de transformar desenhos em algo real.
                         </p>
@@ -36,14 +59,14 @@
                         </p>
                     </div>
                     <div class="imagem">
-                        <img src="imagens/foto-crianca.png" alt="Foto da infância">
+                        <img src="imagens/foto-crianca-800px.png" alt="Foto da infância">
                     </div>
                 </div>
             </div>
             <div class="bloco arquitetura">
                 <div class="container">
                     <div class="texto">
-                        <h3>ARQUITETURA</h3>
+                        <h3>Arquitetura</h3>
                         <p>
                             No curso, vivi momentos muito importantes e conheci pessoas incríveis que levo comigo até hoje. Eu gostava do curso, mas, com o passar do tempo, comecei a perceber que não me identificava de verdade com a profissão. Aos poucos, já não conseguia mais me imaginar atuando naquela área e sentia que, em algum lugar, ainda faltava encontrar aquilo que realmente fazia sentido para mim.
                         </p>
@@ -55,11 +78,11 @@
             </div>
         </section>
 
-        <section id="descobertas">
+        <section id="descobertas" class="secao">
             <div class="bloco intro">
                 <div class="container">
                     <div class="texto">
-                        <h2>O começo de uma nova direção</h2>
+                        <h2>O começo de uma <span>nova direção</span></h2>
                         <p>
                             Sempre fui muito curiosa, e foi justamente essa curiosidade que me trouxe até aqui. Um dia apareceu para mim um vídeo com uma piada sobre lógica de programação. Eu não entendi, mas fui pesquisar o significado e ali nasceu minha curiosidade pela programação.
                         </p>
@@ -68,7 +91,7 @@
                         </p>
                     </div>
                     <div class="imagem">
-                        <img src="imagens/simbolo-caminho.png" alt="">
+                        <img src="imagens/simbolo-caminho.png" alt="Ilustração representando mudança de caminho">
                     </div>
                 </div>
             </div>
@@ -85,11 +108,11 @@
             </div>
         </section>
 
-        <section id="certeza">
+        <section id="certeza" class="secao">
             <div class="bloco intro">
                 <div class="container">
                     <div class="texto">
-                        <h2>Da curiosidade à certeza</h2>
+                        <h2>Da curiosidade <span>à certeza</span></h2>
                         <p>
                             Em 2025, me mudei de cidade para começar minha graduação em Engenharia de Software. Desde então, tenho cada vez mais certeza de que fiz a escolha certa.
                         </p>
@@ -97,16 +120,51 @@
                             Continuei me dedicando aos estudos, fazendo cursos e aproveitando ao máximo tudo que a faculdade tem me proporcionado. Ao longo dessa jornada, tenho conhecido professores incríveis, participado de eventos e vivido momentos muito especiais, como a oportunidade de conhecer pessoalmente o Gustavo Guanabara, que foi o primeiro professor de programação para mim e também para muitas pessoas da área.
                         </p>
                     </div>
-                    <div class="imagem">
-                        <img src="" alt="">
+                    <div class="galeria">
+                        <figure class="card">
+                            <img src="imagens/foto-devpr-700px.jpg" alt="Evento Dev-pr">
+
+                            <figcaption>
+                                Foi aqui que comecei a enxergar o tamanho da área de tecnologia.
+                            </figcaption>
+                        </figure>
+                        <figure class="card">
+                            <img src="imagens/foto-guanabara-700px.jpg" alt="Foto com Gustavo Guanabara">
+                            
+                            <figcaption>
+                                Momentos que me permitiram conhecer pessoas que inspiraram minha trajetória.
+                            </figcaption>
+                        </figure>
+                        <figure class="card">
+                            <img src="imagens/foto-estudos-1000px.jpg" alt="Foto de estudos">
+                            
+                            <figcaption>
+                                Por trás de cada conquista, existiram muitos resumos, cafés e tentativas.
+                            </figcaption>
+                        </figure>
+                        <figure class="card">
+                            <img src="imagens/foto-certificado-1000px.jpg" alt="Foto de certificado">
+                            
+                            <figcaption>
+                                Pequenas conquistas que me motivam a continuar.
+                            </figcaption>
+                        </figure>
+                        <figure class="card">
+                            <img src="imagens/foto-aurora-1000px.jpg" alt="Foto com amigos">
+                            
+                            <figcaption>
+                                Transformando conceitos em projetos.
+                            </figcaption>
+                        </figure>
                     </div>
+                    <h2>Momentos que me trouxeram <span>até aqui</span></h2>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-
+        <p>© 2026 Natália Rodrigues</p>
     </footer>
 </body>
 </html>
